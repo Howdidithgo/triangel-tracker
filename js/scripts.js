@@ -25,9 +25,10 @@ $().ready(function(){
       var side1 = parseInt($("[name='side1']").val());
       var side2 = parseInt($("[name='side2']").val());
       var side3 = parseInt($("[name='side3']").val());
-    }catch(error){
+    }catch (e) {
       $(".output").text("Please enter three sides in digitals.");
     }
+
     if (side1 && side2 && side3){
       var result = legalTriangle(side1, side2, side3);
       $(".input").text('You entered: '+side1 + " , " + side2 + " , " + side3);
@@ -37,6 +38,5 @@ $().ready(function(){
     }
     $(".result").show();
 
-
-  })
-})
+  });
+});
